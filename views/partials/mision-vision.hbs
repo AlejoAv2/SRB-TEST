@@ -1,0 +1,49 @@
+  <!-- Sección Corporativa: Misión y Visión con Parallax por GPU -->
+  <section class="section-mision-vision">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <!-- Sección Misión-->
+        <div class="col-lg-6 d-flex">
+          <article class="mv-card mv-mision parallax-section w-100 d-flex flex-column justify-content-between reveal-up" style="--reveal-order: 0;" id="mision">
+            <div class="parallax-bg mv-mision-bg" data-parallax-speed="0.14" aria-hidden="true"></div>
+            <div class="mv-content">
+              <div class="d-flex align-items-center mb-4 mv-header">
+                <div class="mv-icon-badge mv-icon-light me-3">
+                  <img src="{{mision.icono}}" alt="" style="height: 38px;" loading="lazy" decoding="async">
+                </div>
+                <h2 class="colorNegro titulo mb-0">{{mision.titulo}}</h2>
+              </div>
+              <p class="colorNegro parrafo mb-0">
+                {{mision.descripcion}}
+              </p>
+            </div>
+            <div class="mv-watermark d-flex justify-content-end mt-4" id="logoSRBMision">
+              <img src="{{mision.logoMarcaAgua}}" alt="" loading="lazy" decoding="async">
+            </div>
+          </article>
+        </div>
+
+        <!-- Sección Visión-->
+        <div class="col-lg-6 d-flex">
+          <article class="mv-card mv-vision parallax-section w-100 d-flex flex-column justify-content-between reveal-up" style="--reveal-order: 1;" id="vision">
+            <div class="parallax-bg mv-vision-bg" data-parallax-speed="0.14" aria-hidden="true"></div>
+            <div class="mv-content">
+              <div class="d-flex align-items-center mb-4 mv-header t-v">
+                <div class="mv-icon-badge mv-icon-dark me-3">
+                  <img src="{{vision.icono}}" alt="" style="height: 38px;" loading="lazy" decoding="async">
+                </div>
+                <h2 class="titulo text-white mb-0">{{vision.titulo}}</h2>
+              </div>
+              <p class="parrafo text-white mb-0">
+                {{vision.descripcion}}
+              </p>
+            </div>
+            <div class="mv-watermark d-flex justify-content-end mt-4" id="logoSRBVision">
+              <img src="{{vision.logoMarcaAgua}}" alt="" loading="lazy" decoding="async">
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+

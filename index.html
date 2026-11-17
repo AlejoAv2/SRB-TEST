@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <link rel="canonical" href="https://www.srbseguridad.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>SRB</title>
+</head>
+
+<body>
+      <!--Barra de navegación-->
+    <div class="nav-wrapper fixed-top w-100">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <div class="container-fluid px-lg-0">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="./img/LogoSRB2.svg" height="68" alt="Logo SRB" decoding="async">
+          </a>
+
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-lg-center navbar-nav-scroll" style="--bs-scroll-height: 500px;">
+                            <li class="nav-item bordeDerecho">
+                <a class="nav-link active" aria-current="page" href="#quienesSomos">¿QUIENES SOMOS?</a>
+              </li>
+              
+              <li class="nav-item bordeDerecho">
+                <a class="nav-link active"  href="#servicios">SERVICIOS</a>
+              </li>
+              
+              <li class="nav-item bordeDerecho">
+                <a class="nav-link active"  href="#contactanos">CONTÁCTANOS</a>
+              </li>
+                            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                <a class="nav-link active nav-btn-login" href="https://suite.arenalogix.app" target="_blank">INICIAR SESIÓN</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+    </div>
+
+    <!-- Encabezado con Parallax Multicapa GPU y Vitrina Fotográfica de Operación -->
+  <header class="hero-header position-relative w-100 p-0 parallax-section" id="img-principal">
+    <!-- Capa 1: Imagen de fondo acelerada por GPU -->
+    <div class="parallax-bg hero-parallax-bg" data-parallax-speed="0.28" aria-hidden="true"></div>
+
+    <!-- Capa 2: Líneas diagonales técnicas en contra-parallax (estilo Energizando) -->
+    <div class="hero-diagonal-lines" data-parallax-speed="-0.14" aria-hidden="true"></div>
+
+    <!-- Capa 3: Isotipo institucional flotante en profundidad -->
+    <div class="hero-watermark-iso" data-parallax-speed="-0.2" aria-hidden="true">
+      <img src="./img/isotipo.svg" alt="" decoding="async">
+    </div>
+
+    <div class="hero-content container" id="div-con">
+      <div class="row align-items-center justify-content-between g-4 g-lg-5">
+        <!-- Identidad Principal SRB -->
+        <div class="col-lg-5 d-flex flex-column align-items-center">
+          <div class="hero-box tilt-card" id="logoSRBVertical">
+            <div class="hero-box-glow" aria-hidden="true"></div>
+            <img src="./img/LogoSRBVertical2.svg" alt="LogoSRBVertical" class="hero-logo" decoding="async">
+            <!-- <h2 class="fw-bold text-center" style="font-size: 4vh;">SOLUCIONES DE SEGURIDAD</h2> -->
+          </div>
+        </div>
+
+        <!-- Vitrina Visual Interactiva de Centros de Monitoreo y Operación -->
+        <div class="col-lg-7">
+          <div class="hero-showcase" id="heroShowcase">
+            <div class="hero-showcase-main">
+              <div class="hero-showcase-frame" id="heroGalleryStage">
+                                <img src="./img/imgPrincipal2.jpg" alt="" class="hero-showcase-img active" decoding="async">
+                
+                <img src="./img/imgMonitoreoDetalle.jpg" alt="" class="hero-showcase-img " decoding="async">
+                
+                <img src="./img/imgVisionFondo.jpg" alt="" class="hero-showcase-img " decoding="async">
+                
+                <img src="./img/imgPrincipal.png" alt="" class="hero-showcase-img " decoding="async">
+                                <div class="hero-showcase-corner hero-corner-tl" aria-hidden="true"></div>
+                <div class="hero-showcase-corner hero-corner-br" aria-hidden="true"></div>
+                <div class="hero-showcase-badge" aria-hidden="true">
+                  <img src="./img/isotipo.svg" alt="" decoding="async">
+                </div>
+              </div>
+            </div>
+            <div class="hero-showcase-thumbs" id="heroGalleryThumbs">
+                            <button type="button" class="hero-thumb-btn active" data-slide-index="0" aria-label="Vista 0">
+                <img src="./img/imgPrincipal2.jpg" alt="" decoding="async">
+              </button>
+              
+              <button type="button" class="hero-thumb-btn " data-slide-index="1" aria-label="Vista 1">
+                <img src="./img/imgMonitoreoDetalle.jpg" alt="" decoding="async">
+              </button>
+              
+              <button type="button" class="hero-thumb-btn " data-slide-index="2" aria-label="Vista 2">
+                <img src="./img/imgVisionFondo.jpg" alt="" decoding="async">
+              </button>
+              
+              <button type="button" class="hero-thumb-btn " data-slide-index="3" aria-label="Vista 3">
+                <img src="./img/imgPrincipal.png" alt="" decoding="async">
+              </button>
+                          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicador animado para iniciar el recorrido de la empresa -->
+      <div class="hero-scroll-wrap text-center mt-4 pt-2">
+        <a href="#quienesSomos" class="hero-scroll-indicator" aria-label="Ver recorrido">
+          <span class="scroll-mouse">
+            <span class="scroll-wheel"></span>
+          </span>
+          <img src="./img/flecha.svg" alt="" class="scroll-chevron" decoding="async">
+        </a>
+      </div>
+    </div>
+  </header>
+
+    <!-- Sección Quiénes somos con Mosaico Visual de Centros de Monitoreo -->
+  <section id="quienesSomos" class="section-quienes">
+    <article class="container">
+      <div class="quienes-card mx-auto reveal-up">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-7">
+            <div class="heading-wrap text-center text-lg-start mb-4">
+              <h2 class="colorAzul titulo section-heading section-heading-left d-inline-block mb-0">¿QUIENES SOMOS?</h2>
+            </div>
+            <p class="colorNegro parrafo text-lg-start mb-0">SRB soluciones de seguridad es una empresa especializada y enfocada principalmente en la profesionalización de talento humano de los centros de monitoreo y control, así mismo somos apoyo para las administraciones municipales, regionales y entidades público-privadas de asesorar, participar, proyectar y ejecutar proyectos de seguridad ciudadana enfocados en los centros de monitoreos, esto con el fin de contribuir positiva y asertivamente en la correcta operación de los mismos</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="quienes-visual-stack">
+              <div class="quienes-photo-primary">
+                <img src="./img/imgPrincipal2.jpg" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="quienes-photo-secondary" data-parallax-speed="-0.08">
+                <img src="./img/imgMonitoreoDetalle.jpg" alt="" loading="lazy" decoding="async">
+              </div>
+              <div class="quienes-iso-floating" aria-hidden="true">
+                <img src="./img/isotipo.svg" alt="" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+    <!-- Sección Corporativa: Misión y Visión con Parallax por GPU -->
+  <section class="section-mision-vision">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <!-- Sección Misión-->
+        <div class="col-lg-6 d-flex">
+          <article class="mv-card mv-mision parallax-section w-100 d-flex flex-column justify-content-between reveal-up" style="--reveal-order: 0;" id="mision">
+            <div class="parallax-bg mv-mision-bg" data-parallax-speed="0.14" aria-hidden="true"></div>
+            <div class="mv-content">
+              <div class="d-flex align-items-center mb-4 mv-header">
+                <div class="mv-icon-badge mv-icon-light me-3">
+                  <img src="./img/isotipoNegro.svg" alt="" style="height: 38px;" loading="lazy" decoding="async">
+                </div>
+                <h2 class="colorNegro titulo mb-0">MISIÓN</h2>
+              </div>
+              <p class="colorNegro parrafo mb-0">
+                Trabajar por el principal pilar de la armonía ciudadana como es la seguridad siendo nuestra empresa eje fundamental para el desarrollo sostenible de la seguridad ciudadana a nivel local, departamental y nacional.
+              </p>
+            </div>
+            <div class="mv-watermark d-flex justify-content-end mt-4" id="logoSRBMision">
+              <img src="./img/LogoSRB.svg" alt="" loading="lazy" decoding="async">
+            </div>
+          </article>
+        </div>
+
+        <!-- Sección Visión-->
+        <div class="col-lg-6 d-flex">
+          <article class="mv-card mv-vision parallax-section w-100 d-flex flex-column justify-content-between reveal-up" style="--reveal-order: 1;" id="vision">
+            <div class="parallax-bg mv-vision-bg" data-parallax-speed="0.14" aria-hidden="true"></div>
+            <div class="mv-content">
+              <div class="d-flex align-items-center mb-4 mv-header t-v">
+                <div class="mv-icon-badge mv-icon-dark me-3">
+                  <img src="./img/isotipo.svg" alt="" style="height: 38px;" loading="lazy" decoding="async">
+                </div>
+                <h2 class="titulo text-white mb-0">VISIÓN</h2>
+              </div>
+              <p class="parrafo text-white mb-0">
+                En el 2028 SRB soluciones de seguridad SAS continuará llevando desarrollo tecnológico en pro de la seguridad ciudadana a los diferentes municipios y entidades del orden departamental y nacional, así mismo, será líder en integración de soluciones logísticas en base a la tecnología y al apoyo interinstitucional de las diferentes entidades del orden militar y administrativas del sector público.
+              </p>
+            </div>
+            <div class="mv-watermark d-flex justify-content-end mt-4" id="logoSRBVision">
+              <img src="./img/LogoSRB.svg" alt="" loading="lazy" decoding="async">
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Sección Nuestros servicios-->
+  <section id="servicios" class="section-servicios">
+    <article class="container">
+      <div class="heading-wrap text-center mb-5 reveal-up">
+        <h2 class="titulo section-heading text-center d-inline-block colorNegro mb-0">NUESTROS SERVICIOS</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+          <div class="service-card w-100 reveal-up" style="--reveal-order: 0;">
+            <div class="service-skew-accent" aria-hidden="true"></div>
+            <div class="service-icon-wrap">
+              <img class="iconoServicio" src="./img/servicio1.svg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="tituloServicio fw-bold text-center colorNegro">
+              CAPACITACIÓN Y PROFESIONALIZACIÓN DEL PERSONAL OPERATIVO DE LOS CENTROS DE MONITOREO Y CONTROL:
+            </h3>
+            <p class="parrafoServicio parrafo colorNegro mb-0">
+              Capacitamos y profesionalizamos el personal dispuesto para estos centros de monitoreo y control, con el fin de que estas personas sean perfiladas correctamente para lograr una correcta labor. Cumpliendo con los objetivos de estos centros de monitoreo, dando resultados positivos frente a la operación de los mismos.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+          <div class="service-card w-100 reveal-up" style="--reveal-order: 1;">
+            <div class="service-skew-accent" aria-hidden="true"></div>
+            <div class="service-icon-wrap">
+              <img class="iconoServicio" src="./img/servicio2.svg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="tituloServicio fw-bold text-center colorNegro">
+              CERTIFICACIÓN INSTITUCIONAL PARA PERSONAL OPERATIVO DE LOS CENTROS DE MONITOREO Y CONTROL:
+            </h3>
+            <p class="parrafoServicio parrafo colorNegro mb-0">
+              Certificamos al personal operativo de los centros de monitoreo y control por medio de las diferentes instituciones de las fuerzas del orden, para brindarles los conocimientos y las herramientas necesarias para la buena administración y operación de estos centros de monitoreo.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+          <div class="service-card w-100 reveal-up" style="--reveal-order: 2;">
+            <div class="service-skew-accent" aria-hidden="true"></div>
+            <div class="service-icon-wrap">
+              <img class="iconoServicio" src="./img/servicio3.svg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="tituloServicio fw-bold text-center colorNegro">
+              PLANEACIÓN Y EJECUCIÓN DE PROYECTOS PARA LA MODERNIZACIÓN Y PUESTA EN MARCHA DE CCTV Y REDES DE TELECOMUNICACIONES
+            </h3>
+            <p class="parrafoServicio parrafo colorNegro mb-0">
+              Proyectamos, planeamos y ejecutamos los proyectos de seguridad ciudadana encaminados para la modernización o puesta en marcha de los centros de monitoreo y control o CCTV y redes de telecomunicaciones direccionadas a la seguridad ciudadana.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+          <div class="service-card w-100 reveal-up" style="--reveal-order: 3;">
+            <div class="service-skew-accent" aria-hidden="true"></div>
+            <div class="service-icon-wrap">
+              <img class="iconoServicio" src="./img/servicio5.svg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="tituloServicio fw-bold text-center colorNegro">
+              SUPERVICIÓN E INTERVENTORÍA EN PROYECTOS DE SEGURIDAD CIUDADANA DIRIGIDO A LOS CENTROS DE MONITOREO Y CONTROL:
+            </h3>
+            <p class="parrafoServicio parrafo colorNegro mb-0">
+              Supervisamos la ejecución y entrega de proyectos de seguridad ciudadana, con el fin de dar las garantías contractuales de obra, presupuesto y de características esenciales de cumplimiento por parte de los ejecutores de dichos proyectos. Esto con el fin de darle garantía, transparencia y cumplimiento a las entidades contratantes.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
+          <div class="service-card w-100 reveal-up" style="--reveal-order: 4;">
+            <div class="service-skew-accent" aria-hidden="true"></div>
+            <div class="service-icon-wrap">
+              <img class="iconoServicio" src="./img/servicio6.svg" alt="" loading="lazy" decoding="async">
+            </div>
+            <h3 class="tituloServicio fw-bold text-center colorNegro">
+              ASESORIA EN SEGURIDAD CIUDADANA:
+            </h3>
+            <p class="parrafoServicio parrafo colorNegro mb-0">
+              Asesoramos y acompañamos a los entes públicos y privados en pro de las mejoras en seguridad, orden y justicia para así contribuir positivamente en acciones tendientes a mejorar la seguridad y el territorio.
+            </p>
+          </div>
+        </div>      </div>
+      <!-- Llamado a la acción ubicado estratégicamente después de conocer la empresa y sus servicios -->
+      <div class="text-center mt-5 pt-2 reveal-up">
+        <a class="btn btn-primary rounded-pill m-auto btn-sr d-inline-block text-center" href="#contactanos"
+          role="button">CONTÁCTENOS</a>
+      </div>
+    </article>
+  </section>
+
+    <!-- Sección Clientes con Ventana Parallax acelerada por GPU -->
+  <section class="section-clientes">
+    <article id="clientes" class="parallax-section">
+      <!-- Capa de fondo con Parallax a 60 FPS (sin background-attachment: fixed) -->
+      <div class="parallax-bg clientes-parallax-bg" data-parallax-speed="0.22" aria-hidden="true"></div>
+      <div class="clientes-diagonal-overlay" data-parallax-speed="-0.1" aria-hidden="true"></div>
+
+      <div class="container position-relative z-2">
+        <!--Título clientes-->
+        <div class="heading-wrap text-center mb-5 reveal-up">
+          <h2 class="titulo section-heading section-heading-light text-center d-inline-block text-white mb-0" id="flecha">CLIENTES</h2>
+        </div>
+        <!--imágenes clientes-->
+        <div class="clientes-carousel-wrapper position-relative mx-auto reveal-up" id="imgClientes">
+          <img class="carousel-arrow arrow-prev" src="./img/flecha.svg" alt="" id="flechaAdelante" decoding="async">
+          <img class="carousel-arrow arrow-next" src="./img/flecha.svg" alt="" id="flechaAtras" decoding="async">
+          <div class="slider overflow-hidden mx-auto w-100">
+            <ul class="clientes-track m-0 p-0">
+              <li class="cliente-item list-unstyled">
+                <div class="cliente-card">
+                  <div class="cliente-logo-box">
+                    <img src="./img/clientes/seguridadoriente.png" alt="" decoding="async">
+                  </div>
+                  <div class="cliente-title-box">
+                    <h2 class="tituloClientes fw-bold text-center mb-0 w-100">EMPRESA DE SEGURIDAD <br>DEL ORIENTE (ESO)</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="cliente-item list-unstyled">
+                <div class="cliente-card">
+                  <div class="cliente-logo-box">
+                    <img src="./img/clientes/rionegro.png" alt="" decoding="async">
+                  </div>
+                  <div class="cliente-title-box">
+                    <h2 class="tituloClientes fw-bold text-center mb-0 w-100">MUNICIPIO DE RIONEGRO <br>ANTIOQUIA</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="cliente-item list-unstyled">
+                <div class="cliente-card">
+                  <div class="cliente-logo-box">
+                    <img src="./img/clientes/autonomaguatape.png" alt="" decoding="async">
+                  </div>
+                  <div class="cliente-title-box">
+                    <h2 class="tituloClientes fw-bold text-center mb-0 w-100">EMPRESA AUTONOMA <br>DE GUATAPÉ</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="cliente-item list-unstyled">
+                <div class="cliente-card">
+                  <div class="cliente-logo-box">
+                    <img src="./img/clientes/guatape.png" alt="" decoding="async">
+                  </div>
+                  <div class="cliente-title-box">
+                    <h2 class="tituloClientes fw-bold text-center mb-0 w-100">MUNICIPIO DE GUATAPÉ <br>ANTIOQUIA</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="cliente-item list-unstyled">
+                <div class="cliente-card">
+                  <div class="cliente-logo-box">
+                    <img src="./img/clientes/penol.png" alt="" decoding="async">
+                  </div>
+                  <div class="cliente-title-box">
+                    <h2 class="tituloClientes fw-bold text-center mb-0 w-100">MUNICIPIO DE <br>EL PEÑOL</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="cliente-item list-unstyled">
+                <div class="cliente-card">
+                  <div class="cliente-logo-box">
+                    <img src="./img/clientes/sanvicente.png" alt="" decoding="async">
+                  </div>
+                  <div class="cliente-title-box">
+                    <h2 class="tituloClientes fw-bold text-center mb-0 w-100">MUNICIPIO DE <br>SAN VICENTE DE FERRER</h2>
+                  </div>
+                </div>
+              </li>            </ul>
+          </div>
+          <div class="carousel-dots d-flex justify-content-center gap-2 mt-4" id="clientesDots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+    <!-- Sección Aliados-->
+  <section class="w-100 section-aliados" id="aliados">
+    <article class="container">
+      <div class="position-relative mb-5 d-flex justify-content-center align-items-center reveal-up">
+        <hr class="aliados-line position-absolute start-0 w-100 m-0">
+        <h2 class="titulo aliados colorAzul text-center mb-0 px-4">ALIADOS</h2>
+      </div>
+      <div class="row g-4 justify-content-center align-items-center" id="dImgAliados">
+        <div class="col-6 col-sm-4 col-md-4 col-lg-2 d-flex justify-content-center">
+          <div class="aliado-card reveal-up" style="--reveal-order: 0;">
+            <img src="./img/aliados/logoPolicia.png" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-4 col-lg-2 d-flex justify-content-center">
+          <div class="aliado-card reveal-up" style="--reveal-order: 1;">
+            <img src="./img/aliados/logoFiscalia.png" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-4 col-lg-2 d-flex justify-content-center">
+          <div class="aliado-card reveal-up" style="--reveal-order: 2;">
+            <img src="./img/aliados/comfama.png" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-4 col-lg-2 d-flex justify-content-center">
+          <div class="aliado-card reveal-up" style="--reveal-order: 3;">
+            <img src="./img/aliados/dahua.png" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-4 col-lg-2 d-flex justify-content-center">
+          <div class="aliado-card reveal-up" style="--reveal-order: 4;">
+            <img src="./img/aliados/tecnocomer.png" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-4 col-lg-2 d-flex justify-content-center">
+          <div class="aliado-card reveal-up" style="--reveal-order: 5;">
+            <img src="./img/aliados/hikvision.png" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>      </div>
+    </article>
+  </section>
+
+    <!-- Sección Contáctanos-->
+  <section id="contactanos" class="section-contactanos">
+    <article class="container">
+      <div class="heading-wrap text-center mb-5 reveal-up">
+        <h2 class="titulo section-heading text-center d-inline-block colorAzul mb-0">CONTÁCTANOS</h2>
+      </div>
+      <div class="contact-wrapper mx-auto reveal-up">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-lg-6 d-form">
+            <form action="https://formspree.io/f/xvojvyda" method="post" class="h-100 d-flex flex-column justify-content-center">
+              <div class="mb-3">
+                <input type="text" class="form-control rounded-pill" id="formNombre" placeholder="NOMBRE COMPLETO"
+                  name="Nombre">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control rounded-pill" id="formEmail" placeholder="EMAIL" name="Email">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control rounded-pill" id="formTelefono" placeholder="TELÉFONO"
+                  name="Telefono">
+              </div>
+              <div class="mb-4">
+                <textarea class="form-control bordeRedondo" placeholder="MENSAJE" id="formMensaje"
+                  name="Mensaje"></textarea>
+              </div>
+              <div class="d-grid col-sm-8 col-md-6 mx-auto">
+                <button type="submit" class="btn btn-primary rounded-pill btn-submit">ENVIAR</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center" id="linkContactos">
+            <div class="contact-item ">
+              <a href="https://wa.link/inua0v" target="_blank" class="contact-link">
+                <span class="contact-icon-box">
+                  <img class="iconoContactos" src="./img/whatsapp.svg" alt="" loading="lazy" decoding="async">
+                </span>
+                <p class="tituloContactanos colorNegro fw-bold mb-0">317 439 86 55 &nbsp;-&nbsp; 321 687 82 22</p>
+              </a>
+            </div>
+            <div class="contact-item ">
+              <a href=" https://www.instagram.com/srbsdseguridad/?hl=es" target="_blank" class="contact-link">
+                <span class="contact-icon-box">
+                  <img class="iconoContactos" src="./img/instagram.svg" alt="" loading="lazy" decoding="async">
+                </span>
+                <p class="tituloContactanos colorNegro fw-bold mb-0">SRBSDSEGURIDAD</p>
+              </a>
+            </div>
+            <div class="contact-item ">
+              <a href="mailto:srbsoluciones.seguridad@gmail.com"  class="contact-link">
+                <span class="contact-icon-box">
+                  <img class="iconoContactos" src="./img/email.svg" alt="" loading="lazy" decoding="async">
+                </span>
+                <p class="tituloContactanos colorNegro fw-bold mb-0">GERENCIA@SRBSEGURIDAD.COM</p>
+              </a>
+            </div>
+            <div class="contact-item mb-0">
+              <a href="https://www.google.com/maps/place/6%C2%B010'03.8%22N+75%C2%B022'40.6%22W/@6.167725,-75.377933,17z/data=!4m4!3m3!8m2!3d6.167725!4d-75.377933?entry=ttu&g_ep=EgoyMDI2MTEwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-link">
+                <span class="contact-icon-box">
+                  <img class="iconoContactos" src="./img/marcador.svg" alt="" loading="lazy" decoding="async">
+                </span>
+                <p class="tituloContactanos colorNegro fw-bold mb-0">FINCA 10, VEREDA FONTIBÓN <br> <span class="mTexto">RIONEGRO, ANTIOQUIA, COLOMBIA</span> </p>
+              </a>
+            </div>          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+    <!-- Sección Pie de página-->
+  <footer id="piePagina">
+    <article class="container">
+      <div class="row g-4 justify-content-between align-items-stretch footer-main wrapper-footer-skew">
+        <div class="col-sm-12 col-md-6 col-lg-5 d-flex">
+          <div class="footer-skew-col w-100">
+            <div class="footer-vertical-block">
+              <p class="p-pp mb-0">
+                NIT:&nbsp; 901676254-3 <br>
+                SOLUCIONES DE SEGURIDAD<br>
+                CELULAR:&nbsp; 317 439 86 55 &nbsp;- &nbsp;321 687 82 22<br>
+                CORREO: GERENCIA@SRBSEGURIDAD.COM<br>
+                DIRECCIÓN: DIAGONAL 50C # 46-08 EDIFICIO ZURICH OF.301-302<br>MUNICIPIO DE RIONEGRO.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex">
+          <div class="footer-skew-col footer-skew-col-mid w-100">
+            <div class="footer-vertical-block">
+              <p class="p-pp mb-0">
+                ALIADOS: <br>
+                FISCALÍA GENERAL DE LA NACIÓN<br>
+                HIKVISION<br>
+                TECNOCOMERS<br>
+                COMFAMA<br>
+                DAHUA<br>
+                ARENA LOGIX<br>
+                POLICIA NACIONAL DE COLOMBIA
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 d-flex justify-content-center justify-content-lg-end align-items-center gap-3">
+          <div class="footer-badge">
+            <img src="./img/LogoMercantil2026.png" alt="" loading="lazy" decoding="async">
+          </div>
+          <div class="footer-badge footer-badge-wide">
+            <img src="./img/logoCamaraComercio.png" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex justify-content-center pt-4 mt-4">
+        <img src="./img/LogoSRB.svg" alt="" style="height: 48px;" loading="lazy" decoding="async">
+      </div>
+    </article>
+  </footer>
+
+
+  <script src="./js/bootstrap.min.js" defer></script>
+  <script src="./js/slider.js" defer></script>
+</body>
+
+</html>
+

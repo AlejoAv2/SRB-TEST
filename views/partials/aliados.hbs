@@ -1,0 +1,19 @@
+  <!-- Sección Aliados-->
+  <section class="w-100 section-aliados" id="aliados">
+    <article class="container">
+      <div class="position-relative mb-5 d-flex justify-content-center align-items-center reveal-up">
+        <hr class="aliados-line position-absolute start-0 w-100 m-0">
+        <h2 class="titulo aliados colorAzul text-center mb-0 px-4">{{aliados.titulo}}</h2>
+      </div>
+      <div class="row g-4 justify-content-center align-items-center" id="dImgAliados">
+{{#each aliados.lista}}
+        <div class="col-6 col-sm-4 col-md-4 col-lg-2 d-flex justify-content-center">
+          <div class="aliado-card reveal-up" style="--reveal-order: {{@index}};">
+            <img src="{{imagen}}" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+{{/each}}
+      </div>
+    </article>
+  </section>
+

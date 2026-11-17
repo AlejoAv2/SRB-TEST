@@ -1,0 +1,213 @@
+{
+  "site": {
+    "lang": "es",
+    "title": "SRB",
+    "canonical": "https://www.srbseguridad.com/",
+    "favicon": "./img/favicon.ico",
+    "logoNav": "./img/LogoSRB2.svg",
+    "logoHero": "./img/LogoSRBVertical2.svg",
+    "logoVector": "./img/LogoSRB.svg",
+    "isotipoClaro": "./img/isotipo.svg",
+    "isotipoOscuro": "./img/isotipoNegro.svg"
+  },
+  "nav": {
+    "items": [
+      {
+        "label": "¿QUIENES SOMOS?",
+        "href": "#quienesSomos",
+        "bordeDerecho": true,
+        "isCurrent": true
+      },
+      {
+        "label": "SERVICIOS",
+        "href": "#servicios",
+        "bordeDerecho": true,
+        "isCurrent": false
+      },
+      {
+        "label": "CONTÁCTANOS",
+        "href": "#contactanos",
+        "bordeDerecho": true,
+        "isCurrent": false
+      }
+    ],
+    "login": {
+      "label": "INICIAR SESIÓN",
+      "href": "https://suite.arenalogix.app"
+    }
+  },
+  "hero": {
+    "scrollHref": "#quienesSomos",
+    "ctaLabel": "CONTÁCTENOS",
+    "ctaHref": "#contactanos",
+    "galeria": [
+      {
+        "imagen": "./img/imgPrincipal2.jpg",
+        "isFirst": true
+      },
+      {
+        "imagen": "./img/imgMonitoreoDetalle.jpg",
+        "isFirst": false
+      },
+      {
+        "imagen": "./img/imgVisionFondo.jpg",
+        "isFirst": false
+      },
+      {
+        "imagen": "./img/imgPrincipal.png",
+        "isFirst": false
+      }
+    ]
+  },
+  "quienesSomos": {
+    "titulo": "¿QUIENES SOMOS?",
+    "descripcion": "SRB soluciones de seguridad es una empresa especializada y enfocada principalmente en la profesionalización de talento humano de los centros de monitoreo y control, así mismo somos apoyo para las administraciones municipales, regionales y entidades público-privadas de asesorar, participar, proyectar y ejecutar proyectos de seguridad ciudadana enfocados en los centros de monitoreos, esto con el fin de contribuir positiva y asertivamente en la correcta operación de los mismos",
+    "fotoPrincipal": "./img/imgPrincipal2.jpg",
+    "fotoSecundaria": "./img/imgMonitoreoDetalle.jpg"
+  },
+  "mision": {
+    "titulo": "MISIÓN",
+    "icono": "./img/isotipoNegro.svg",
+    "logoMarcaAgua": "./img/LogoSRB.svg",
+    "descripcion": "Trabajar por el principal pilar de la armonía ciudadana como es la seguridad siendo nuestra empresa eje fundamental para el desarrollo sostenible de la seguridad ciudadana a nivel local, departamental y nacional."
+  },
+  "vision": {
+    "titulo": "VISIÓN",
+    "icono": "./img/isotipo.svg",
+    "logoMarcaAgua": "./img/LogoSRB.svg",
+    "descripcion": "En el 2028 SRB soluciones de seguridad SAS continuará llevando desarrollo tecnológico en pro de la seguridad ciudadana a los diferentes municipios y entidades del orden departamental y nacional, así mismo, será líder en integración de soluciones logísticas en base a la tecnología y al apoyo interinstitucional de las diferentes entidades del orden militar y administrativas del sector público."
+  },
+  "servicios": {
+    "titulo": "NUESTROS SERVICIOS",
+    "ctaLabel": "CONTÁCTENOS",
+    "ctaHref": "#contactanos",
+    "lista": [
+      {
+        "icono": "./img/servicio1.svg",
+        "titulo": "CAPACITACIÓN Y PROFESIONALIZACIÓN DEL PERSONAL OPERATIVO DE LOS CENTROS DE MONITOREO Y CONTROL:",
+        "descripcion": "Capacitamos y profesionalizamos el personal dispuesto para estos centros de monitoreo y control, con el fin de que estas personas sean perfiladas correctamente para lograr una correcta labor. Cumpliendo con los objetivos de estos centros de monitoreo, dando resultados positivos frente a la operación de los mismos."
+      },
+      {
+        "icono": "./img/servicio2.svg",
+        "titulo": "CERTIFICACIÓN INSTITUCIONAL PARA PERSONAL OPERATIVO DE LOS CENTROS DE MONITOREO Y CONTROL:",
+        "descripcion": "Certificamos al personal operativo de los centros de monitoreo y control por medio de las diferentes instituciones de las fuerzas del orden, para brindarles los conocimientos y las herramientas necesarias para la buena administración y operación de estos centros de monitoreo."
+      },
+      {
+        "icono": "./img/servicio3.svg",
+        "titulo": "PLANEACIÓN Y EJECUCIÓN DE PROYECTOS PARA LA MODERNIZACIÓN Y PUESTA EN MARCHA DE CCTV Y REDES DE TELECOMUNICACIONES",
+        "descripcion": "Proyectamos, planeamos y ejecutamos los proyectos de seguridad ciudadana encaminados para la modernización o puesta en marcha de los centros de monitoreo y control o CCTV y redes de telecomunicaciones direccionadas a la seguridad ciudadana."
+      },
+      {
+        "icono": "./img/servicio5.svg",
+        "titulo": "SUPERVICIÓN E INTERVENTORÍA EN PROYECTOS DE SEGURIDAD CIUDADANA DIRIGIDO A LOS CENTROS DE MONITOREO Y CONTROL:",
+        "descripcion": "Supervisamos la ejecución y entrega de proyectos de seguridad ciudadana, con el fin de dar las garantías contractuales de obra, presupuesto y de características esenciales de cumplimiento por parte de los ejecutores de dichos proyectos. Esto con el fin de darle garantía, transparencia y cumplimiento a las entidades contratantes."
+      },
+      {
+        "icono": "./img/servicio6.svg",
+        "titulo": "ASESORIA EN SEGURIDAD CIUDADANA:",
+        "descripcion": "Asesoramos y acompañamos a los entes públicos y privados en pro de las mejoras en seguridad, orden y justicia para así contribuir positivamente en acciones tendientes a mejorar la seguridad y el territorio."
+      }
+    ]
+  },
+  "clientes": {
+    "titulo": "CLIENTES",
+    "flechaImg": "./img/flecha.svg",
+    "lista": [
+      {
+        "imagen": "./img/clientes/seguridadoriente.png",
+        "tituloHtml": "EMPRESA DE SEGURIDAD <br>DEL ORIENTE (ESO)"
+      },
+      {
+        "imagen": "./img/clientes/rionegro.png",
+        "tituloHtml": "MUNICIPIO DE RIONEGRO <br>ANTIOQUIA"
+      },
+      {
+        "imagen": "./img/clientes/autonomaguatape.png",
+        "tituloHtml": "EMPRESA AUTONOMA <br>DE GUATAPÉ"
+      },
+      {
+        "imagen": "./img/clientes/guatape.png",
+        "tituloHtml": "MUNICIPIO DE GUATAPÉ <br>ANTIOQUIA"
+      },
+      {
+        "imagen": "./img/clientes/penol.png",
+        "tituloHtml": "MUNICIPIO DE <br>EL PEÑOL"
+      },
+      {
+        "imagen": "./img/clientes/sanvicente.png",
+        "tituloHtml": "MUNICIPIO DE <br>SAN VICENTE DE FERRER"
+      }
+    ]
+  },
+  "aliados": {
+    "titulo": "ALIADOS",
+    "lista": [
+      {
+        "imagen": "./img/aliados/logoPolicia.png"
+      },
+      {
+        "imagen": "./img/aliados/logoFiscalia.png"
+      },
+      {
+        "imagen": "./img/aliados/comfama.png"
+      },
+      {
+        "imagen": "./img/aliados/dahua.png"
+      },
+      {
+        "imagen": "./img/aliados/tecnocomer.png"
+      },
+      {
+        "imagen": "./img/aliados/hikvision.png"
+      }
+    ]
+  },
+  "contacto": {
+    "titulo": "CONTÁCTANOS",
+    "formAction": "https://formspree.io/f/xvojvyda",
+    "placeholders": {
+      "nombre": "NOMBRE COMPLETO",
+      "email": "EMAIL",
+      "telefono": "TELÉFONO",
+      "mensaje": "MENSAJE",
+      "boton": "ENVIAR"
+    },
+    "canales": [
+      {
+        "href": "https://wa.link/inua0v",
+        "targetBlank": true,
+        "icono": "./img/whatsapp.svg",
+        "textoHtml": "317 439 86 55 &nbsp;-&nbsp; 321 687 82 22",
+        "isLast": false
+      },
+      {
+        "href": " https://www.instagram.com/srbsdseguridad/?hl=es",
+        "targetBlank": true,
+        "icono": "./img/instagram.svg",
+        "textoHtml": "SRBSDSEGURIDAD",
+        "isLast": false
+      },
+      {
+        "href": "mailto:srbsoluciones.seguridad@gmail.com",
+        "targetBlank": false,
+        "icono": "./img/email.svg",
+        "textoHtml": "GERENCIA@SRBSEGURIDAD.COM",
+        "isLast": false
+      },
+      {
+        "href": "https://www.google.com/maps/place/6%C2%B010'03.8%22N+75%C2%B022'40.6%22W/@6.167725,-75.377933,17z/data=!4m4!3m3!8m2!3d6.167725!4d-75.377933?entry=ttu&g_ep=EgoyMDI2MTEwOC4wIKXMDSoASAFQAw%3D%3D",
+        "targetBlank": true,
+        "icono": "./img/marcador.svg",
+        "textoHtml": "FINCA 10, VEREDA FONTIBÓN <br> <span class=\"mTexto\">RIONEGRO, ANTIOQUIA, COLOMBIA</span> ",
+        "isLast": true
+      }
+    ]
+  },
+  "footer": {
+    "infoHtml": "NIT:&nbsp; 901676254-3 <br>\n                SOLUCIONES DE SEGURIDAD<br>\n                CELULAR:&nbsp; 317 439 86 55 &nbsp;- &nbsp;321 687 82 22<br>\n                CORREO: GERENCIA@SRBSEGURIDAD.COM<br>\n                DIRECCIÓN: DIAGONAL 50C # 46-08 EDIFICIO ZURICH OF.301-302<br>MUNICIPIO DE RIONEGRO.",
+    "aliadosHtml": "ALIADOS: <br>\n                FISCALÍA GENERAL DE LA NACIÓN<br>\n                HIKVISION<br>\n                TECNOCOMERS<br>\n                COMFAMA<br>\n                DAHUA<br>\n                ARENA LOGIX<br>\n                POLICIA NACIONAL DE COLOMBIA",
+    "logoMercantil": "./img/LogoMercantil2026.png",
+    "logoCamara": "./img/logoCamaraComercio.png",
+    "logoPie": "./img/LogoSRB.svg"
+  }
+}

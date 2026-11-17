@@ -1,0 +1,47 @@
+  <!-- Sección Contáctanos-->
+  <section id="contactanos" class="section-contactanos">
+    <article class="container">
+      <div class="heading-wrap text-center mb-5 reveal-up">
+        <h2 class="titulo section-heading text-center d-inline-block colorAzul mb-0">{{contacto.titulo}}</h2>
+      </div>
+      <div class="contact-wrapper mx-auto reveal-up">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-lg-6 d-form">
+            <form action="{{contacto.formAction}}" method="post" class="h-100 d-flex flex-column justify-content-center">
+              <div class="mb-3">
+                <input type="text" class="form-control rounded-pill" id="formNombre" placeholder="{{contacto.placeholders.nombre}}"
+                  name="Nombre">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control rounded-pill" id="formEmail" placeholder="{{contacto.placeholders.email}}" name="Email">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control rounded-pill" id="formTelefono" placeholder="{{contacto.placeholders.telefono}}"
+                  name="Telefono">
+              </div>
+              <div class="mb-4">
+                <textarea class="form-control bordeRedondo" placeholder="{{contacto.placeholders.mensaje}}" id="formMensaje"
+                  name="Mensaje"></textarea>
+              </div>
+              <div class="d-grid col-sm-8 col-md-6 mx-auto">
+                <button type="submit" class="btn btn-primary rounded-pill btn-submit">{{contacto.placeholders.boton}}</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center" id="linkContactos">
+{{#each contacto.canales}}
+            <div class="contact-item {{#if isLast}}mb-0{{/if}}">
+              <a href="{{href}}" {{#if targetBlank}}target="_blank"{{/if}} class="contact-link">
+                <span class="contact-icon-box">
+                  <img class="iconoContactos" src="{{icono}}" alt="" loading="lazy" decoding="async">
+                </span>
+                <p class="tituloContactanos colorNegro fw-bold mb-0">{{{textoHtml}}}</p>
+              </a>
+            </div>
+{{/each}}
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+

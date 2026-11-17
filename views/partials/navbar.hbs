@@ -1,0 +1,29 @@
+    <!--Barra de navegación-->
+    <div class="nav-wrapper fixed-top w-100">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
+        <div class="container-fluid px-lg-0">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="{{site.logoNav}}" height="68" alt="Logo SRB" decoding="async">
+          </a>
+
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 align-items-lg-center navbar-nav-scroll" style="--bs-scroll-height: 500px;">
+              {{#each nav.items}}
+              <li class="nav-item {{#if bordeDerecho}}bordeDerecho{{/if}}">
+                <a class="nav-link active" {{#if isCurrent}}aria-current="page"{{/if}} href="{{href}}">{{label}}</a>
+              </li>
+              {{/each}}
+              <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                <a class="nav-link active nav-btn-login" href="{{nav.login.href}}" target="_blank">{{nav.login.label}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+    </div>
+

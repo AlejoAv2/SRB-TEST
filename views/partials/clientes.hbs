@@ -1,0 +1,29 @@
+  <!-- Sección Clientes con Ventana Parallax acelerada por GPU -->
+  <section class="section-clientes">
+    <article id="clientes" class="parallax-section">
+      <!-- Capa de fondo con Parallax a 60 FPS (sin background-attachment: fixed) -->
+      <div class="parallax-bg clientes-parallax-bg" data-parallax-speed="0.22" aria-hidden="true"></div>
+      <div class="clientes-diagonal-overlay" data-parallax-speed="-0.1" aria-hidden="true"></div>
+
+      <div class="container position-relative z-2">
+        <!--Título clientes-->
+        <div class="heading-wrap text-center mb-5 reveal-up">
+          <h2 class="titulo section-heading section-heading-light text-center d-inline-block text-white mb-0" id="flecha">{{clientes.titulo}}</h2>
+        </div>
+        <!--imágenes clientes-->
+        <div class="clientes-carousel-wrapper position-relative mx-auto reveal-up" id="imgClientes">
+          <img class="carousel-arrow arrow-prev" src="{{clientes.flechaImg}}" alt="" id="flechaAdelante" decoding="async">
+          <img class="carousel-arrow arrow-next" src="{{clientes.flechaImg}}" alt="" id="flechaAtras" decoding="async">
+          <div class="slider overflow-hidden mx-auto w-100">
+            <ul class="clientes-track m-0 p-0">
+{{#each clientes.lista}}
+{{> cliente-card}}
+{{/each}}
+            </ul>
+          </div>
+          <div class="carousel-dots d-flex justify-content-center gap-2 mt-4" id="clientesDots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </article>
+  </section>
+

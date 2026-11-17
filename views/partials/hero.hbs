@@ -1,0 +1,61 @@
+  <!-- Encabezado con Parallax Multicapa GPU y Vitrina Fotográfica de Operación -->
+  <header class="hero-header position-relative w-100 p-0 parallax-section" id="img-principal">
+    <!-- Capa 1: Imagen de fondo acelerada por GPU -->
+    <div class="parallax-bg hero-parallax-bg" data-parallax-speed="0.28" aria-hidden="true"></div>
+
+    <!-- Capa 2: Líneas diagonales técnicas en contra-parallax (estilo Energizando) -->
+    <div class="hero-diagonal-lines" data-parallax-speed="-0.14" aria-hidden="true"></div>
+
+    <!-- Capa 3: Isotipo institucional flotante en profundidad -->
+    <div class="hero-watermark-iso" data-parallax-speed="-0.2" aria-hidden="true">
+      <img src="{{site.isotipoClaro}}" alt="" decoding="async">
+    </div>
+
+    <div class="hero-content container" id="div-con">
+      <div class="row align-items-center justify-content-between g-4 g-lg-5">
+        <!-- Identidad Principal SRB -->
+        <div class="col-lg-5 d-flex flex-column align-items-center">
+          <div class="hero-box tilt-card" id="logoSRBVertical">
+            <div class="hero-box-glow" aria-hidden="true"></div>
+            <img src="{{site.logoHero}}" alt="LogoSRBVertical" class="hero-logo" decoding="async">
+            <!-- <h2 class="fw-bold text-center" style="font-size: 4vh;">SOLUCIONES DE SEGURIDAD</h2> -->
+          </div>
+        </div>
+
+        <!-- Vitrina Visual Interactiva de Centros de Monitoreo y Operación -->
+        <div class="col-lg-7">
+          <div class="hero-showcase" id="heroShowcase">
+            <div class="hero-showcase-main">
+              <div class="hero-showcase-frame" id="heroGalleryStage">
+                {{#each hero.galeria}}
+                <img src="{{imagen}}" alt="" class="hero-showcase-img {{#if isFirst}}active{{/if}}" decoding="async">
+                {{/each}}
+                <div class="hero-showcase-corner hero-corner-tl" aria-hidden="true"></div>
+                <div class="hero-showcase-corner hero-corner-br" aria-hidden="true"></div>
+                <div class="hero-showcase-badge" aria-hidden="true">
+                  <img src="{{site.isotipoClaro}}" alt="" decoding="async">
+                </div>
+              </div>
+            </div>
+            <div class="hero-showcase-thumbs" id="heroGalleryThumbs">
+              {{#each hero.galeria}}
+              <button type="button" class="hero-thumb-btn {{#if isFirst}}active{{/if}}" data-slide-index="{{@index}}" aria-label="Vista {{@index}}">
+                <img src="{{imagen}}" alt="" decoding="async">
+              </button>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicador animado para iniciar el recorrido de la empresa -->
+      <div class="hero-scroll-wrap text-center mt-4 pt-2">
+        <a href="{{hero.scrollHref}}" class="hero-scroll-indicator" aria-label="Ver recorrido">
+          <span class="scroll-mouse">
+            <span class="scroll-wheel"></span>
+          </span>
+          <img src="{{clientes.flechaImg}}" alt="" class="scroll-chevron" decoding="async">
+        </a>
+      </div>
+    </div>
+  </header>

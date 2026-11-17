@@ -1,0 +1,1684 @@
+/* ==========================================================================
+   SRB Soluciones de Seguridad - Modern Corporate & Institutional Stylesheet
+   Synthesized from local reference styles:
+   - Energizando S.A.S. (theme 301: diagonal polylines, skewed panels, emblem headers, angled footer dividers)
+   - E.S.O. Rionegro (termosolar / skin_1: Oswald + Heebo typography, #003056/#04518c/#00a1d9/#59dcc4 gradients, institutional cards)
+   - Hardware-Accelerated GPU Parallax (translate3d) & Staggered Scroll-Reveal
+   ========================================================================== */
+
+:root {
+  /* Paleta armónica SRB + E.S.O. Rionegro + Energizando */
+  --srb-primary: #0085AF;
+  --srb-primary-light: #00A1D9;
+  --srb-primary-soft: rgba(0, 161, 217, 0.09);
+  --srb-navy: #0E2E45;
+  --srb-navy-eso: #003056;
+  --srb-navy-deep: #102739;
+  --srb-royal: #04518C;
+  --srb-energizando-blue: #16365B;
+  --srb-accent: #00A1D9;
+  --srb-teal: #59DCC4;
+  --srb-gradient-eso: linear-gradient(90deg, #04518C 0%, #00A1D9 45%, #59DCC4 100%);
+  --srb-gradient-brand: linear-gradient(135deg, #003056 0%, #04518C 50%, #0085AF 100%);
+  --srb-bg-light: #F4F7FA;
+  --srb-bg-eso: #EFEFEF;
+  --srb-input-bg: #F6F6F6;
+  --srb-white: #FFFFFF;
+  --srb-text-dark: #1E3547;
+  --srb-text-muted: #52677A;
+  --srb-line-tech: #D8D8E1;
+  --srb-border: rgba(0, 48, 86, 0.1);
+  --srb-shadow-sm: 0 8px 24px rgba(0, 48, 86, 0.06);
+  --srb-shadow-md: 0 16px 38px rgba(0, 48, 86, 0.1);
+  --srb-shadow-lg: 0 24px 54px rgba(0, 48, 86, 0.16);
+  --srb-radius: 16px;
+  --srb-transition: all 0.32s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Custom Scrollbar & Selection (Energizando & ESO style) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1F30;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: var(--srb-royal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--srb-primary-light);
+}
+
+::selection {
+  background-color: var(--srb-royal);
+  color: var(--srb-white);
+}
+
+::-moz-selection {
+  background-color: var(--srb-royal);
+  color: var(--srb-white);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--srb-white);
+  color: var(--srb-navy-eso);
+  font-family: 'Heebo', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   GPU Parallax Engine & Scroll-Reveal Animations (60 FPS)
+   ========================================================================== */
+
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -18%;
+  height: 136%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--reveal-order, 0) * 85ms);
+  will-change: opacity, transform;
+}
+
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .parallax-bg {
+    transform: none !important;
+    top: 0 !important;
+    height: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   Typography & Brand Headings (ESO Oswald + Energizando .title-main:before)
+   ========================================================================== */
+
+.colorAzul {
+  color: var(--srb-primary) !important;
+}
+
+.colorNegro {
+  color: var(--srb-navy-eso) !important;
+}
+
+.titulo {
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.heading-wrap {
+  position: relative;
+}
+
+.section-heading {
+  font-size: clamp(1.95rem, 3.2vw, 2.65rem);
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 18px;
+  padding-left: 38px;
+}
+
+/* Emblem marker before section headings inspired by Energizando's .title-main:before */
+.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 26px;
+  height: 32px;
+  background-image: url('../img/isotipoNegro.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.section-heading-light::before {
+  background-image: url('../img/isotipo.svg');
+}
+
+/* Gradient bar under section headings inspired by ESO's skin_1.css sticky-post gradient */
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) skewX(-25deg);
+  width: 84px;
+  height: 4px;
+  background: var(--srb-gradient-eso);
+  border-radius: 2px;
+}
+
+@media (min-width: 992px) {
+  .section-heading-left::after {
+    left: 38px;
+    transform: skewX(-25deg);
+  }
+}
+
+.section-heading-light::after {
+  background: linear-gradient(90deg, var(--srb-teal), var(--srb-white));
+}
+
+.parrafo {
+  font-family: 'Heebo', 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--srb-text-dark);
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   Navigation Bar (ESO header #main_ul-primary + Energizando sticky nav)
+   ========================================================================== */
+
+.nav-wrapper {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(16, 39, 57, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background-color 0.25s ease, padding 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  z-index: 1050;
+  padding: 8px 0;
+}
+
+.nav-wrapper.nav-scrolled {
+  background: rgba(0, 48, 86, 0.97);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  padding: 3px 0;
+  border-bottom-color: rgba(0, 161, 217, 0.25);
+}
+
+/* GPU-composited scroll progress bar */
+.scroll-progress-bar {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--srb-gradient-eso);
+  transform-origin: 0 50%;
+  transform: scaleX(var(--scroll-progress, 0));
+  will-change: transform;
+  pointer-events: none;
+}
+
+.navbar-brand img {
+  height: 62px;
+  width: auto;
+  transition: height 0.25s ease;
+}
+
+.nav-wrapper.nav-scrolled .navbar-brand img {
+  height: 52px;
+}
+
+.navbar .nav-link {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.92) !important;
+  padding: 8px 20px !important;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* ESO's header #main_ul-primary li:after cyan underline bar (#1ba8e0 / #59dcc4) */
+.navbar .nav-link:not(.nav-btn-login)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: linear-gradient(90deg, #1BA8E0, var(--srb-teal));
+  transform: scaleX(0);
+  transition: transform 0.28s ease;
+}
+
+.navbar .nav-link:not(.nav-btn-login):hover,
+.navbar .nav-link:not(.nav-btn-login).is-current-section {
+  color: var(--srb-teal) !important;
+}
+
+.navbar .nav-link:not(.nav-btn-login):hover::after,
+.navbar .nav-link:not(.nav-btn-login).is-current-section::after {
+  transform: scaleX(1);
+}
+
+.bordeDerecho {
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.nav-btn-login {
+  background: linear-gradient(135deg, var(--srb-royal) 0%, var(--srb-primary-light) 100%);
+  color: var(--srb-white) !important;
+  border-radius: 50px;
+  padding: 9px 24px !important;
+  box-shadow: 0 4px 15px rgba(0, 161, 217, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.nav-btn-login:hover {
+  background: var(--srb-white);
+  color: var(--srb-navy-eso) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(89, 220, 196, 0.4);
+}
+
+/* ==========================================================================
+   Hero Header (#img-principal) with Multi-Layer GPU Parallax & 3D Tilt
+   ========================================================================== */
+
+#img-principal {
+  background-color: var(--srb-navy-deep);
+  min-height: 94vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 96px !important;
+  padding-bottom: 72px !important;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid var(--srb-primary);
+  perspective: 1100px;
+}
+
+.hero-parallax-bg {
+  background-image:
+    linear-gradient(135deg, rgba(16, 39, 57, 0.89) 0%, rgba(0, 48, 86, 0.78) 52%, rgba(0, 133, 175, 0.68) 100%),
+    url(../img/imgPrincipal2.jpg);
+}
+
+/* Energizando .line-diagonal-home & l-solucion.svg inspired geometric lines */
+.hero-diagonal-lines {
+  position: absolute;
+  inset: -15% 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.hero-diagonal-lines::before,
+.hero-diagonal-lines::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 140%;
+  top: -20%;
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+  border-right: 1px solid rgba(89, 220, 196, 0.14);
+  transform: skewX(-38deg);
+}
+
+.hero-diagonal-lines::before {
+  left: -18%;
+  background: linear-gradient(180deg, rgba(0, 161, 217, 0.09) 0%, transparent 70%);
+}
+
+.hero-diagonal-lines::after {
+  right: -22%;
+  background: linear-gradient(0deg, rgba(4, 81, 140, 0.16) 0%, transparent 70%);
+}
+
+.hero-watermark-iso {
+  position: absolute;
+  right: 6%;
+  bottom: 8%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.055;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.hero-watermark-iso img {
+  height: 360px;
+  width: auto;
+}
+
+#img-principal::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--srb-gradient-eso);
+  z-index: 3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-box {
+  background: linear-gradient(145deg, rgba(16, 39, 57, 0.84) 0%, rgba(0, 48, 86, 0.76) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 3px solid var(--srb-teal);
+  border-radius: 24px;
+  padding: 46px 48px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.36);
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateZ(0);
+  transition: transform 0.18s ease-out, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.hero-box-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    360px circle at var(--glow-x, 50%) var(--glow-y, 30%),
+    rgba(89, 220, 196, 0.14),
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -60px;
+  width: 160px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent);
+  transform: skewX(-32deg);
+  pointer-events: none;
+}
+
+#logoSRBVertical img.hero-logo {
+  height: 255px;
+  width: auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s ease;
+}
+
+.hero-box:hover #logoSRBVertical img.hero-logo {
+  transform: scale(1.02);
+}
+
+/* Vitrina Visual Interactiva en el Hero (Centros de Monitoreo y CCTV) */
+.hero-showcase {
+  position: relative;
+  width: 100%;
+}
+
+.hero-showcase-main {
+  position: relative;
+  border-radius: 20px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(0, 161, 217, 0.18) 50%, rgba(89, 220, 196, 0.25) 100%);
+  box-shadow: 0 26px 56px rgba(0, 0, 0, 0.42);
+}
+
+.hero-showcase-frame {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: var(--srb-navy-deep);
+}
+
+.hero-showcase-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 0.65s ease, transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.hero-showcase-img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-showcase-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(10, 28, 46, 0.55) 100%);
+  pointer-events: none;
+}
+
+.hero-showcase-corner {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-corner-tl {
+  top: 14px;
+  left: 14px;
+  border-top: 3px solid var(--srb-teal);
+  border-left: 3px solid var(--srb-teal);
+  border-top-left-radius: 6px;
+}
+
+.hero-corner-br {
+  bottom: 14px;
+  right: 14px;
+  border-bottom: 3px solid var(--srb-primary-light);
+  border-right: 3px solid var(--srb-primary-light);
+  border-bottom-right-radius: 6px;
+}
+
+.hero-showcase-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 18px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: rgba(16, 39, 57, 0.82);
+  border: 1px solid rgba(89, 220, 196, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.hero-showcase-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-showcase-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.hero-thumb-btn {
+  position: relative;
+  height: 68px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  background: var(--srb-navy-deep);
+  cursor: pointer;
+  opacity: 0.65;
+  transition: transform 0.25s ease, opacity 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-thumb-btn:hover,
+.hero-thumb-btn.active {
+  opacity: 1;
+  border-color: var(--srb-teal);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Indicador animado de recorrido hacia ¿Quiénes Somos? */
+.hero-scroll-indicator {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.hero-scroll-indicator:hover {
+  opacity: 1;
+  transform: translateY(4px);
+}
+
+.scroll-mouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.scroll-wheel {
+  width: 4px;
+  height: 8px;
+  background-color: var(--srb-teal);
+  border-radius: 2px;
+  animation: scrollWheelPulse 1.8s infinite ease-in-out;
+}
+
+.scroll-chevron {
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg);
+  opacity: 0.8;
+}
+
+@keyframes scrollWheelPulse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 0.2;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.btn-sr {
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: 2px;
+  font-size: 1.02rem;
+  padding: 13px 46px;
+  background: linear-gradient(90deg, var(--srb-royal) 0%, var(--srb-primary-light) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: var(--srb-white) !important;
+  box-shadow: 0 10px 26px rgba(0, 161, 217, 0.42);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn.btn-primary.btn-sr:hover,
+.btn.btn-primary.btn-sr:focus,
+.btn.btn-primary.btn-sr:active {
+  background: var(--srb-white) !important;
+  border-color: var(--srb-primary-light) !important;
+  color: var(--srb-navy-eso) !important;
+  box-shadow: 0 14px 30px rgba(0, 161, 217, 0.35);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   Sección ¿Quiénes Somos? (#quienesSomos) con Mosaico Visual
+   ========================================================================== */
+
+.section-quienes {
+  padding: 96px 0 52px;
+  background: linear-gradient(180deg, var(--srb-bg-eso) 0%, var(--srb-white) 100%);
+  position: relative;
+}
+
+.quienes-card {
+  max-width: 1140px;
+  background: var(--srb-white);
+  border-radius: var(--srb-radius);
+  padding: 54px 52px;
+  box-shadow: var(--srb-shadow-md);
+  border: 1px solid rgba(0, 48, 86, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.quienes-visual-stack {
+  position: relative;
+  padding-bottom: 34px;
+  padding-right: 18px;
+}
+
+.quienes-photo-primary {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--srb-shadow-md);
+  border: 3px solid var(--srb-white);
+  height: 250px;
+}
+
+.quienes-photo-primary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.quienes-photo-secondary {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 62%;
+  height: 145px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 4px solid var(--srb-white);
+  box-shadow: var(--srb-shadow-lg);
+  z-index: 2;
+  will-change: transform;
+}
+
+.quienes-photo-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.quienes-iso-floating {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--srb-gradient-brand);
+  box-shadow: 0 10px 24px rgba(4, 81, 140, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+  z-index: 3;
+}
+
+.quienes-iso-floating img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Top gradient strip from ESO skin_1.css + angled corner motif from Energizando */
+.quienes-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--srb-gradient-eso);
+}
+
+.quienes-card::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, rgba(0, 161, 217, 0.07), rgba(89, 220, 196, 0.03));
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.quienes-card .parrafo {
+  font-size: 1.08rem;
+  color: var(--srb-text-dark);
+  max-width: 840px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Sección Misión & Visión (#mision & #vision) - GPU Parallax Cards
+   ========================================================================== */
+
+.section-mision-vision {
+  padding: 40px 0 96px;
+  background-color: var(--srb-white);
+}
+
+.mv-card {
+  border-radius: var(--srb-radius);
+  padding: 46px 44px 36px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--srb-shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 130px;
+  height: 100%;
+  transform: skewX(-28deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--srb-shadow-lg);
+}
+
+#mision.mv-mision {
+  background-color: #F4F8FC;
+  border: 1px solid rgba(4, 81, 140, 0.18);
+  border-left: 6px solid var(--srb-royal);
+}
+
+.mv-mision-bg {
+  background-image:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.93) 0%, rgba(240, 246, 252, 0.88) 100%),
+    url('../img/imgMisionFondo.jpg');
+}
+
+#mision.mv-mision::before {
+  background: linear-gradient(180deg, rgba(0, 161, 217, 0.06), transparent);
+}
+
+#vision.mv-vision {
+  background-color: var(--srb-navy-eso);
+  border-left: 6px solid var(--srb-teal);
+}
+
+.mv-vision-bg {
+  background-image:
+    linear-gradient(145deg, rgba(0, 48, 86, 0.92) 0%, rgba(4, 81, 140, 0.87) 100%),
+    url('../img/imgVisionFondo.jpg');
+}
+
+#vision.mv-vision::before {
+  background: linear-gradient(180deg, rgba(89, 220, 196, 0.09), transparent);
+}
+
+.mv-content {
+  position: relative;
+  z-index: 2;
+}
+
+.mv-icon-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mv-icon-light {
+  background-color: rgba(4, 81, 140, 0.1);
+  border: 1px solid rgba(4, 81, 140, 0.22);
+}
+
+.mv-icon-dark {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(89, 220, 196, 0.35);
+}
+
+.mv-header h2 {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+.mv-card .parrafo {
+  font-size: 1.02rem;
+  text-align: left !important;
+  position: relative;
+  z-index: 2;
+}
+
+.mv-vision .parrafo {
+  color: rgba(255, 255, 255, 0.93) !important;
+}
+
+.mv-watermark {
+  position: relative;
+  z-index: 2;
+}
+
+.mv-watermark img {
+  height: 44px;
+  width: auto;
+}
+
+#logoSRBMision img {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(35%) saturate(1637%) hue-rotate(174deg) brightness(92%) contrast(94%);
+  opacity: 0.22;
+}
+
+#logoSRBVision img {
+  opacity: 0.32;
+}
+
+/* ==========================================================================
+   Sección Nuestros Servicios (#servicios)
+   Combines ESO .ultb3-box cards + Energizando .soluciones-skew-home diagonal lines
+   ========================================================================== */
+
+#servicios.section-servicios {
+  background-color: var(--srb-bg-eso);
+  background-image:
+    radial-gradient(circle at 10% 15%, rgba(0, 161, 217, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(4, 81, 140, 0.06) 0%, transparent 45%);
+  padding: 96px 0 104px;
+  position: relative;
+  border-top: 1px solid var(--srb-border);
+  border-bottom: 1px solid var(--srb-border);
+}
+
+.service-card {
+  background: var(--srb-white);
+  border-radius: 14px;
+  padding: 42px 30px 36px;
+  box-shadow: var(--srb-shadow-sm);
+  border: 1px solid rgba(0, 48, 86, 0.08);
+  border-bottom: 4px solid var(--srb-royal);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Energizando-inspired diagonal skewed background band inside each service card */
+.service-skew-accent {
+  position: absolute;
+  top: -30px;
+  right: -65px;
+  width: 140px;
+  height: 180px;
+  background: linear-gradient(180deg, rgba(0, 161, 217, 0.07) 0%, rgba(89, 220, 196, 0.02) 100%);
+  border-left: 1.5px solid rgba(0, 161, 217, 0.16);
+  transform: skewX(-36deg);
+  pointer-events: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: -1;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--srb-gradient-eso);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-9px);
+  box-shadow: var(--srb-shadow-lg);
+  border-bottom-color: var(--srb-primary-light);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover .service-skew-accent {
+  transform: skewX(-36deg) translateX(-28px);
+  background: linear-gradient(180deg, rgba(0, 161, 217, 0.13) 0%, rgba(89, 220, 196, 0.05) 100%);
+}
+
+.service-icon-wrap {
+  width: 92px;
+  height: 92px;
+  border-radius: 22px;
+  background: var(--srb-primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: transform 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
+  border: 1px solid rgba(0, 161, 217, 0.2);
+  position: relative;
+}
+
+.service-card:hover .service-icon-wrap {
+  background: var(--srb-gradient-brand);
+  border-color: transparent;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 22px rgba(4, 81, 140, 0.28);
+}
+
+.iconoServicio {
+  height: 48px;
+  width: auto;
+  transition: filter 0.25s ease;
+}
+
+.service-card:hover .iconoServicio {
+  filter: brightness(0) invert(1);
+}
+
+.tituloServicio {
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+  font-weight: 600 !important;
+  font-size: 1.06rem;
+  line-height: 1.42;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  min-height: 4.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parrafoServicio {
+  font-size: 0.95rem;
+  color: var(--srb-text-muted) !important;
+  text-align: center !important;
+  line-height: 1.72;
+}
+
+/* ==========================================================================
+   Sección Clientes (#clientes) - GPU Parallax Window & Touch-Drag Carousel
+   ========================================================================== */
+
+#clientes {
+  background-color: var(--srb-navy-deep);
+  padding: 92px 0 96px;
+  position: relative;
+  border-bottom: 4px solid var(--srb-primary-light);
+}
+
+.clientes-parallax-bg {
+  background-image:
+    linear-gradient(135deg, rgba(16, 39, 57, 0.91) 0%, rgba(0, 48, 86, 0.87) 55%, rgba(4, 81, 140, 0.84) 100%),
+    url('../img/imgClientesFondo.jpg');
+}
+
+.clientes-diagonal-overlay {
+  position: absolute;
+  inset: -15% 0;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.clientes-diagonal-overlay::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 140%;
+  top: -20%;
+  right: 8%;
+  border-left: 1px solid rgba(89, 220, 196, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(180deg, rgba(0, 161, 217, 0.06), transparent);
+  transform: skewX(-34deg);
+}
+
+.clientes-carousel-wrapper {
+  max-width: 1140px;
+  padding: 0 16px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.slider {
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+
+.clientes-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  will-change: opacity, transform;
+}
+
+.clientes-track.slider-animating {
+  opacity: 0.72;
+  transform: translateY(2px);
+}
+
+.cliente-item {
+  flex: 0 0 calc(25% - 15px);
+  max-width: calc(25% - 15px);
+  pointer-events: none;
+}
+
+.cliente-card {
+  background: linear-gradient(145deg, rgba(16, 48, 78, 0.9) 0%, rgba(10, 31, 51, 0.94) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 3px solid var(--srb-teal);
+  border-radius: var(--srb-radius);
+  padding: 26px 16px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+  pointer-events: none;
+}
+
+.cliente-logo-box {
+  width: 148px;
+  height: 148px;
+  background: var(--srb-white);
+  border-radius: 50%;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  margin-bottom: 18px;
+  border: 3px solid rgba(0, 161, 217, 0.28);
+}
+
+.cliente-logo-box img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.tituloClientes {
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+  font-weight: 500 !important;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  color: var(--srb-white);
+}
+
+.carousel-arrow {
+  display: none;
+}
+
+.arrow-prev {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.arrow-next {
+  right: 0;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.arrow-prev:hover {
+  background: var(--srb-primary-light);
+  border-color: var(--srb-teal);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-next:hover {
+  background: var(--srb-primary-light);
+  border-color: var(--srb-teal);
+  transform: translateY(-50%) scaleX(-1) scale(1.1);
+}
+
+/* ESO/Energizando style pagination bullets (indicadores visuales no clickeables) */
+.carousel-dot {
+  width: 24px;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.32);
+  border: none;
+  padding: 0;
+  cursor: default;
+  pointer-events: none;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.carousel-dot.active {
+  width: 36px;
+  background: var(--srb-teal);
+}
+
+/* ==========================================================================
+   Sección Aliados (#aliados) - ESO Partner Showcase + Energizando Brand Grid
+   ========================================================================== */
+
+#aliados.section-aliados {
+  padding: 84px 0 88px;
+  background-color: var(--srb-white);
+}
+
+.aliados-line {
+  color: var(--srb-primary);
+  border-top: 2px solid rgba(0, 133, 175, 0.25);
+  opacity: 1;
+  top: 50%;
+}
+
+.aliados {
+  background-color: var(--srb-white);
+  z-index: 2;
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  letter-spacing: 2px;
+}
+
+.aliado-card {
+  background: var(--srb-white);
+  border: 1px solid rgba(0, 48, 86, 0.09);
+  border-bottom: 3px solid rgba(0, 161, 217, 0.25);
+  border-radius: 14px;
+  padding: 20px 22px;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--srb-shadow-sm);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.aliado-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--srb-shadow-md);
+  border-color: rgba(0, 161, 217, 0.35);
+  border-bottom-color: var(--srb-royal);
+}
+
+.aliado-card img {
+  max-width: 100%;
+  max-height: 86px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.28s ease;
+}
+
+.aliado-card:hover img {
+  transform: scale(1.07);
+}
+
+/* ==========================================================================
+   Sección Contáctanos (#contactanos)
+   Energizando .wrap-contact-home (#f6f6f6 inputs) + ESO placeholder focus
+   ========================================================================== */
+
+#contactanos.section-contactanos {
+  padding: 88px 0 100px;
+  background: linear-gradient(180deg, var(--srb-bg-eso) 0%, #E4ECF2 100%);
+  border-top: 1px solid var(--srb-border);
+}
+
+.contact-wrapper {
+  max-width: 1080px;
+  background: var(--srb-white);
+  border-radius: 20px;
+  box-shadow: var(--srb-shadow-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0, 48, 86, 0.08);
+  border-top: 5px solid var(--srb-royal);
+}
+
+.d-form {
+  padding: 50px 46px;
+  background: var(--srb-white);
+}
+
+/* Energizando .border-contact-address vertical separation */
+#linkContactos {
+  padding: 50px 46px;
+  background: linear-gradient(145deg, #F5F9FC 0%, #E8F2F8 100%);
+  border-left: 1px solid var(--srb-line-tech);
+  position: relative;
+}
+
+.form-control {
+  font-family: 'Heebo', 'Poppins', sans-serif;
+  font-size: 0.94rem;
+  padding: 14px 22px;
+  border: 1.5px solid #D8D8E1 !important;
+  color: var(--srb-navy-eso) !important;
+  background-color: var(--srb-input-bg);
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-control:focus {
+  border-color: var(--srb-primary-light) !important;
+  background-color: var(--srb-white);
+  box-shadow: 0 0 0 4px rgba(0, 161, 217, 0.14) !important;
+}
+
+.form-control::placeholder {
+  color: #6E8294;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  font-size: 0.85rem;
+  transition: text-indent 0.4s ease, color 0.4s ease;
+}
+
+/* ESO termosolar input focus placeholder animation */
+.form-control:focus::placeholder {
+  text-indent: 12px;
+  color: rgba(110, 130, 148, 0.45);
+}
+
+#formMensaje {
+  height: 138px;
+  resize: vertical;
+}
+
+.bordeRedondo {
+  border-radius: 16px !important;
+}
+
+.btn-primary,
+.btn-submit {
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 1.6px;
+  padding: 13px 34px;
+  background: var(--srb-gradient-brand);
+  border: none;
+  color: var(--srb-white);
+  box-shadow: 0 8px 22px rgba(4, 81, 140, 0.32);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-submit:hover {
+  background: linear-gradient(135deg, var(--srb-primary-light) 0%, var(--srb-royal) 100%);
+  color: var(--srb-white);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 161, 217, 0.4);
+}
+
+#contactanos a {
+  text-decoration: none;
+}
+
+.contact-item {
+  margin-bottom: 18px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 18px;
+  background: var(--srb-white);
+  border-radius: 14px;
+  border: 1px solid rgba(4, 81, 140, 0.12);
+  border-left: 4px solid var(--srb-primary);
+  box-shadow: 0 4px 14px rgba(0, 48, 86, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-link:hover {
+  transform: translateX(6px);
+  border-color: var(--srb-primary-light);
+  border-left-color: var(--srb-royal);
+  box-shadow: 0 8px 22px rgba(0, 161, 217, 0.16);
+}
+
+.contact-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--srb-primary-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.25s ease;
+}
+
+.contact-link:hover .contact-icon-box {
+  background: var(--srb-gradient-brand);
+}
+
+.iconoContactos {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+  transition: filter 0.25s ease;
+}
+
+.contact-link:hover .iconoContactos {
+  filter: brightness(0) invert(1);
+}
+
+.tituloContactanos {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.89rem;
+  line-height: 1.45;
+  letter-spacing: 0.3px;
+  word-break: break-word;
+}
+
+.mTexto {
+  margin-left: 0;
+  color: var(--srb-primary);
+}
+
+/* ==========================================================================
+   Pie de Página (#piePagina)
+   ESO #102739 (ts-footer.footer-1) + Energizando .wrapper-footer-skew columns
+   ========================================================================== */
+
+#piePagina {
+  background: linear-gradient(135deg, var(--srb-navy-deep) 0%, var(--srb-navy-eso) 60%, #093558 100%);
+  color: var(--srb-white);
+  padding: 68px 0 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+#piePagina::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--srb-gradient-eso);
+}
+
+/* Energizando-inspired skewed column dividers on desktop */
+.footer-skew-col {
+  position: relative;
+  padding: 8px 20px 8px 38px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.footer-skew-col::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 18px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--srb-teal), var(--srb-primary-light));
+  transform-origin: top left;
+  transform: skewX(-10deg);
+  border-radius: 2px;
+}
+
+.footer-skew-col-mid::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: -16px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.16);
+  transform-origin: top left;
+  transform: skewX(-10deg);
+}
+
+.p-pp {
+  font-family: 'Heebo', 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.3px;
+}
+
+.footer-badge {
+  background: var(--srb-white);
+  border-radius: 14px;
+  padding: 12px 16px;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  border-bottom: 3px solid var(--srb-primary-light);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.footer-badge:hover {
+  transform: translateY(-4px);
+  border-bottom-color: var(--srb-teal);
+}
+
+.footer-badge img {
+  max-height: 88px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.footer-badge-wide {
+  padding: 12px 20px;
+}
+
+.footer-badge-wide img {
+  max-height: 76px;
+  max-width: 170px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* ==========================================================================
+   Responsive Design (Tablet & Mobile)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  .bordeDerecho {
+    border-right: none;
+  }
+
+  #navbarScroll {
+    background: rgba(16, 39, 57, 0.97);
+    border-radius: 14px;
+    padding: 16px;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .navbar .nav-link {
+    text-align: center;
+    padding: 10px 16px !important;
+  }
+
+  .nav-btn-login {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cliente-item {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  #linkContactos {
+    border-left: none;
+    border-top: 1px solid var(--srb-line-tech);
+  }
+
+  .tituloServicio {
+    min-height: auto;
+  }
+
+  .footer-skew-col {
+    padding-left: 22px;
+  }
+
+  .footer-skew-col::before {
+    left: 0;
+    transform: none;
+  }
+
+  .footer-skew-col-mid::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #img-principal {
+    min-height: 78vh;
+    padding-top: 84px !important;
+    padding-bottom: 44px !important;
+  }
+
+  .hero-box {
+    padding: 36px 24px;
+  }
+
+  #logoSRBVertical img.hero-logo {
+    height: 170px;
+  }
+
+  .hero-showcase-frame {
+    height: 230px;
+  }
+
+  .hero-thumb-btn {
+    height: 52px;
+  }
+
+  .quienes-photo-primary {
+    height: 200px;
+  }
+
+  .quienes-photo-secondary {
+    height: 120px;
+  }
+
+  .section-heading {
+    padding-left: 32px;
+  }
+
+  .section-heading::before {
+    width: 22px;
+    height: 26px;
+  }
+
+  .section-quienes {
+    padding: 60px 0 30px;
+  }
+
+  .quienes-card {
+    padding: 36px 24px;
+  }
+
+  .section-mision-vision {
+    padding: 30px 0 64px;
+  }
+
+  .mv-card {
+    padding: 32px 24px 28px;
+  }
+
+  #servicios.section-servicios,
+  #clientes,
+  #aliados.section-aliados,
+  #contactanos.section-contactanos {
+    padding: 64px 0;
+  }
+
+  .d-form,
+  #linkContactos {
+    padding: 32px 24px;
+  }
+
+  .clientes-carousel-wrapper {
+    padding: 0 44px;
+  }
+
+  .cliente-logo-box {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cliente-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer-skew-col {
+    text-align: left;
+  }
+}

@@ -1,0 +1,18 @@
+  <!-- Sección Nuestros servicios-->
+  <section id="servicios" class="section-servicios">
+    <article class="container">
+      <div class="heading-wrap text-center mb-5 reveal-up">
+        <h2 class="titulo section-heading text-center d-inline-block colorNegro mb-0">{{servicios.titulo}}</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+{{#each servicios.lista}}
+{{> service-card}}
+{{/each}}
+      </div>
+      <!-- Llamado a la acción ubicado estratégicamente después de conocer la empresa y sus servicios -->
+      <div class="text-center mt-5 pt-2 reveal-up">
+        <a class="btn btn-primary rounded-pill m-auto btn-sr d-inline-block text-center" href="{{servicios.ctaHref}}"
+          role="button">{{servicios.ctaLabel}}</a>
+      </div>
+    </article>
+  </section>

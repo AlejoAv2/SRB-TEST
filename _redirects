@@ -1,0 +1,6 @@
+# Redirigir dominio viejo al nuevo
+https://srbsolucionesdeseguridad.com/* https://www.srbseguridad.com/:splat 301!
+https://www.srbsolucionesdeseguridad.com/* https://www.srbseguridad.com/:splat 301!
+
+# Redirigir versión sin www del nuevo dominio
+https://srbseguridad.com/* https://www.srbseguridad.com/:splat 301!
